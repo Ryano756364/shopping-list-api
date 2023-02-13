@@ -21,6 +21,6 @@ public class ReviewController {
     return new ResponseEntity<Review>(reviewService.createReview(
             payload.get("reviewBody"), //gets JSON data from user and converts to Map
             payload.get("sku")),
-            HttpStatus.CREATED);
+            HttpStatus.OK);
     }
 }

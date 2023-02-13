@@ -1,11 +1,9 @@
 package com.ryanpodell.shoppinglistapi;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -16,7 +14,7 @@ public class ItemService {
         return itemRepo.findAll(); //.findAll() is described inside MongoRepository class
     }
 
-    public Optional<Item> singleItem(int sku) {  //returning optional here in the even and id doesn't exist in db
+    public Optional<Item> findItemBySku(String sku) {  //returning optional here in the even and id doesn't exist in db
         return itemRepo.findItemBySku(sku);
     }
 }

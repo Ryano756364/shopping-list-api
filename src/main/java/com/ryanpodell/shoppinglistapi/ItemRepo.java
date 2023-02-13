@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository  //lets framework know this is a repository
 public interface ItemRepo extends MongoRepository<Item, ObjectId> {
-    Optional<Item> findItemBySku(int sku);
+    Optional<Item> findItemBySku(String sku);
 }
 
 // ItemRepo does all the talking with db and getting data back
