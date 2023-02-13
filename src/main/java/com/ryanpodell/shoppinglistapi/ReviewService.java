@@ -19,7 +19,7 @@ public class ReviewService {
 
         mongoTemplate.update(Item.class)
                 .matching(Criteria.where("sku").is(sku))
-                .apply(new Update().push("reviews").value(review))
+                .apply(new Update().push("reviewIds").value(review))
                 .first();
 
         return review;
